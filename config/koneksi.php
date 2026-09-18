@@ -1,24 +1,14 @@
 <?php
+//config/koneksi.php
 
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "db_sellmate";
+$host ='localhost';
+$user = 'root';
+$password = '';
+$database = 'db_sellmate';
 
-// Membuat koneksi
-$koneksi = mysqli_connect(
-    $host,
-    $username,
-    $password,
-    $database
-);
+$koneksi = mysqli_connect($host,$user,$password,$database);
 
-// Mengecek koneksi
 if (!$koneksi) {
-    die("Koneksi database gagal: " . mysqli_connect_error());
+    die('Koneksi database gagal: ' .mysqli_connect_error());
 }
-
-// Mengatur karakter
-mysqli_set_charset($koneksi, "utf8mb4");
-
 ?>
